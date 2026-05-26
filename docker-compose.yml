@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: dwh_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: dwh_user
+      POSTGRES_PASSWORD: dwh_password
+      POSTGRES_DB: dwh
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d  # для автоматического создания схем
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: dwh_metabase
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:

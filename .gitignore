@@ -1,0 +1,10 @@
+# Данные Docker (volumes)
+postgres_data/
+
+# Временные файлы
+*.tmp
+*.log
+
+# CSV-файлы с данными (исходные датасеты)
+data/*.csv
+*.csv
