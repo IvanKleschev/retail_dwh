@@ -3,7 +3,8 @@
 
 Проект демонстрирует полный цикл построения корпоративного хранилища данных: от сырых данных до BI‑дашбордов и контроля качества.
 
-Автор Иван - tg @CagetRocket7
+Автор
+Иван - tg @CagetRocket7
 
 ## Стек
 - **PostgreSQL** (Docker) — основная БД для DWH
@@ -18,17 +19,19 @@
 - **Core** — нормализованные измерения (SCD2) и факты (схема `core`)
 - **Mart** — витрины для отчётности и BI (схема `mart`)
 
-## ER-диаграмма Core-слоя: (docs/er_diagram_core.png) или (docs/dwh_retail.drawio)
+## ER-диаграмма Core-слоя
+(docs/er_diagram_core.png) или (docs/dwh_retail.drawio)
 
-## Lineage данных: (docs/data_lineage.png)
+## Lineage данных 
+(docs/data_lineage.png)
 
 ## Контроль качества
 Набор проверок целостности данных, включая поиск перекрытий, пропусков и дубликатов в SCD2, находится в sql/04_quality_checks.sql.
 
 ## Документация
-Архитектурная записка
-S2T‑маппинг
-Правила качества данных
+- **SАрхитектурная записка**
+- **S2T‑маппинг**
+- **Правила качества данных**
 
 ## датасет
 https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/code?datasetId=55151&sortBy=voteCount
